@@ -1,0 +1,644 @@
+{
+  "linear": [
+    {
+      "pattern": "random",
+      "size": 10000,
+      "k": 10,
+      "time_seconds": 0.025076866149902344,
+      "result_length": 9757,
+      "compression_percent": 97.57000000000001
+    },
+    {
+      "pattern": "random",
+      "size": 30000,
+      "k": 10,
+      "time_seconds": 0.060132741928100586,
+      "result_length": 29375,
+      "compression_percent": 97.91666666666666
+    },
+    {
+      "pattern": "random",
+      "size": 50000,
+      "k": 10,
+      "time_seconds": 0.10124015808105469,
+      "result_length": 49059,
+      "compression_percent": 98.11800000000001
+    },
+    {
+      "pattern": "random",
+      "size": 70000,
+      "k": 10,
+      "time_seconds": 0.13817834854125977,
+      "result_length": 68724,
+      "compression_percent": 98.17714285714285
+    },
+    {
+      "pattern": "random",
+      "size": 90000,
+      "k": 10,
+      "time_seconds": 0.17028379440307617,
+      "result_length": 88362,
+      "compression_percent": 98.18
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 10000,
+      "k": 10,
+      "time_seconds": 0.01184535026550293,
+      "result_length": 12,
+      "compression_percent": 0.12
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 30000,
+      "k": 10,
+      "time_seconds": 0.009807825088500977,
+      "result_length": 32,
+      "compression_percent": 0.10666666666666667
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 50000,
+      "k": 10,
+      "time_seconds": 0.027019977569580078,
+      "result_length": 52,
+      "compression_percent": 0.104
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 70000,
+      "k": 10,
+      "time_seconds": 0.03512740135192871,
+      "result_length": 72,
+      "compression_percent": 0.10285714285714286
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 90000,
+      "k": 10,
+      "time_seconds": 0.04167628288269043,
+      "result_length": 91,
+      "compression_percent": 0.10111111111111111
+    },
+    {
+      "pattern": "uniform",
+      "size": 10000,
+      "k": 10,
+      "time_seconds": 0.006730318069458008,
+      "result_length": 12,
+      "compression_percent": 0.12
+    },
+    {
+      "pattern": "uniform",
+      "size": 30000,
+      "k": 10,
+      "time_seconds": 0.01371908187866211,
+      "result_length": 32,
+      "compression_percent": 0.10666666666666667
+    },
+    {
+      "pattern": "uniform",
+      "size": 50000,
+      "k": 10,
+      "time_seconds": 0.020825624465942383,
+      "result_length": 52,
+      "compression_percent": 0.104
+    },
+    {
+      "pattern": "uniform",
+      "size": 70000,
+      "k": 10,
+      "time_seconds": 0.031709909439086914,
+      "result_length": 72,
+      "compression_percent": 0.10285714285714286
+    },
+    {
+      "pattern": "uniform",
+      "size": 90000,
+      "k": 10,
+      "time_seconds": 0.04215550422668457,
+      "result_length": 91,
+      "compression_percent": 0.10111111111111111
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 10000,
+      "k": 10,
+      "time_seconds": 0.015747547149658203,
+      "result_length": 3359,
+      "compression_percent": 33.589999999999996
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 30000,
+      "k": 10,
+      "time_seconds": 0.0391240119934082,
+      "result_length": 10070,
+      "compression_percent": 33.56666666666667
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 50000,
+      "k": 10,
+      "time_seconds": 0.06053924560546875,
+      "result_length": 16816,
+      "compression_percent": 33.632
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 70000,
+      "k": 10,
+      "time_seconds": 0.09008026123046875,
+      "result_length": 23541,
+      "compression_percent": 33.629999999999995
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 90000,
+      "k": 10,
+      "time_seconds": 0.10918402671813965,
+      "result_length": 30282,
+      "compression_percent": 33.64666666666667
+    }
+  ],
+  "stress": [
+    {
+      "pattern": "random",
+      "size": 100000,
+      "k": 5,
+      "time_seconds": 0.10343575477600098,
+      "result_length": 99095,
+      "compression_percent": 99.095,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 100000,
+      "k": 10,
+      "time_seconds": 0.19878911972045898,
+      "result_length": 98197,
+      "compression_percent": 98.197,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 100000,
+      "k": 26,
+      "time_seconds": 0.49853062629699707,
+      "result_length": 95583,
+      "compression_percent": 95.583,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 200000,
+      "k": 5,
+      "time_seconds": 0.23288750648498535,
+      "result_length": 198275,
+      "compression_percent": 99.1375,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 200000,
+      "k": 10,
+      "time_seconds": 0.4402482509613037,
+      "result_length": 196604,
+      "compression_percent": 98.302,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 200000,
+      "k": 26,
+      "time_seconds": 1.0059921741485596,
+      "result_length": 191469,
+      "compression_percent": 95.7345,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 500000,
+      "k": 5,
+      "time_seconds": 0.5560407638549805,
+      "result_length": 495949,
+      "compression_percent": 99.18979999999999,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 500000,
+      "k": 10,
+      "time_seconds": 1.045363187789917,
+      "result_length": 491985,
+      "compression_percent": 98.397,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 500000,
+      "k": 26,
+      "time_seconds": 2.4977004528045654,
+      "result_length": 479453,
+      "compression_percent": 95.8906,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 1000000,
+      "k": 5,
+      "time_seconds": 1.1291327476501465,
+      "result_length": 992019,
+      "compression_percent": 99.2019,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 1000000,
+      "k": 10,
+      "time_seconds": 2.121875047683716,
+      "result_length": 984236,
+      "compression_percent": 98.4236,
+      "status": "PASS"
+    },
+    {
+      "pattern": "random",
+      "size": 1000000,
+      "k": 26,
+      "time_seconds": 5.112075328826904,
+      "result_length": 959695,
+      "compression_percent": 95.9695,
+      "status": "TLE>3s"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 100000,
+      "k": 5,
+      "time_seconds": 0.04552340507507324,
+      "result_length": 3125,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 100000,
+      "k": 10,
+      "time_seconds": 0.05190753936767578,
+      "result_length": 100,
+      "compression_percent": 0.1,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 100000,
+      "k": 26,
+      "time_seconds": 0.05046725273132324,
+      "result_length": 6,
+      "compression_percent": 0.006,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 200000,
+      "k": 5,
+      "time_seconds": 0.09918832778930664,
+      "result_length": 6250,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 200000,
+      "k": 10,
+      "time_seconds": 0.10097169876098633,
+      "result_length": 197,
+      "compression_percent": 0.0985,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 200000,
+      "k": 26,
+      "time_seconds": 0.09832644462585449,
+      "result_length": 6,
+      "compression_percent": 0.003,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 500000,
+      "k": 5,
+      "time_seconds": 0.26093101501464844,
+      "result_length": 15625,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 500000,
+      "k": 10,
+      "time_seconds": 0.26218199729919434,
+      "result_length": 490,
+      "compression_percent": 0.098,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 500000,
+      "k": 26,
+      "time_seconds": 0.2536509037017822,
+      "result_length": 7,
+      "compression_percent": 0.0014,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 1000000,
+      "k": 5,
+      "time_seconds": 0.5074276924133301,
+      "result_length": 31250,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 1000000,
+      "k": 10,
+      "time_seconds": 0.5040042400360107,
+      "result_length": 978,
+      "compression_percent": 0.0978,
+      "status": "PASS"
+    },
+    {
+      "pattern": "repeated_pairs",
+      "size": 1000000,
+      "k": 26,
+      "time_seconds": 0.5138766765594482,
+      "result_length": 7,
+      "compression_percent": 0.0007,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 100000,
+      "k": 5,
+      "time_seconds": 0.048482656478881836,
+      "result_length": 3125,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 100000,
+      "k": 10,
+      "time_seconds": 0.048796653747558594,
+      "result_length": 100,
+      "compression_percent": 0.1,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 100000,
+      "k": 26,
+      "time_seconds": 0.04871416091918945,
+      "result_length": 6,
+      "compression_percent": 0.006,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 200000,
+      "k": 5,
+      "time_seconds": 0.09700679779052734,
+      "result_length": 6250,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 200000,
+      "k": 10,
+      "time_seconds": 0.09921455383300781,
+      "result_length": 197,
+      "compression_percent": 0.0985,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 200000,
+      "k": 26,
+      "time_seconds": 0.10252714157104492,
+      "result_length": 6,
+      "compression_percent": 0.003,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 500000,
+      "k": 5,
+      "time_seconds": 0.24653291702270508,
+      "result_length": 15625,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 500000,
+      "k": 10,
+      "time_seconds": 0.24830365180969238,
+      "result_length": 490,
+      "compression_percent": 0.098,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 500000,
+      "k": 26,
+      "time_seconds": 0.24425816535949707,
+      "result_length": 7,
+      "compression_percent": 0.0014,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 1000000,
+      "k": 5,
+      "time_seconds": 0.46323728561401367,
+      "result_length": 31250,
+      "compression_percent": 3.125,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 1000000,
+      "k": 10,
+      "time_seconds": 0.48589444160461426,
+      "result_length": 978,
+      "compression_percent": 0.0978,
+      "status": "PASS"
+    },
+    {
+      "pattern": "uniform",
+      "size": 1000000,
+      "k": 26,
+      "time_seconds": 0.4820084571838379,
+      "result_length": 7,
+      "compression_percent": 0.0007,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 100000,
+      "k": 5,
+      "time_seconds": 0.08820152282714844,
+      "result_length": 53895,
+      "compression_percent": 53.895,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 100000,
+      "k": 10,
+      "time_seconds": 0.12644553184509277,
+      "result_length": 33644,
+      "compression_percent": 33.644,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 100000,
+      "k": 26,
+      "time_seconds": 0.20880866050720215,
+      "result_length": 25137,
+      "compression_percent": 25.136999999999997,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 200000,
+      "k": 5,
+      "time_seconds": 0.16916775703430176,
+      "result_length": 107783,
+      "compression_percent": 53.8915,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 200000,
+      "k": 10,
+      "time_seconds": 0.26619577407836914,
+      "result_length": 67266,
+      "compression_percent": 33.633,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 200000,
+      "k": 26,
+      "time_seconds": 0.42134881019592285,
+      "result_length": 50288,
+      "compression_percent": 25.144,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 500000,
+      "k": 5,
+      "time_seconds": 0.42272520065307617,
+      "result_length": 269486,
+      "compression_percent": 53.8972,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 500000,
+      "k": 10,
+      "time_seconds": 0.6344265937805176,
+      "result_length": 168144,
+      "compression_percent": 33.6288,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 500000,
+      "k": 26,
+      "time_seconds": 1.0750868320465088,
+      "result_length": 125730,
+      "compression_percent": 25.146,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 1000000,
+      "k": 5,
+      "time_seconds": 0.8386859893798828,
+      "result_length": 538980,
+      "compression_percent": 53.898,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 1000000,
+      "k": 10,
+      "time_seconds": 1.2492988109588623,
+      "result_length": 336452,
+      "compression_percent": 33.645199999999996,
+      "status": "PASS"
+    },
+    {
+      "pattern": "mixed_patterns",
+      "size": 1000000,
+      "k": 26,
+      "time_seconds": 2.130596399307251,
+      "result_length": 251400,
+      "compression_percent": 25.14,
+      "status": "PASS"
+    }
+  ],
+  "edge_stress": [
+    {
+      "description": "Very large uniform string (a*300k, K=26)",
+      "pattern": "uniform",
+      "size": 300000,
+      "k": 26,
+      "time_seconds": 0.15572452545166016,
+      "result_length": 9,
+      "compression_percent": 0.003,
+      "status": "PASS"
+    },
+    {
+      "description": "Highly compressible repeated pattern (ab*250k, K=26)",
+      "pattern": "repeated_pairs",
+      "size": 250000,
+      "k": 26,
+      "time_seconds": 0.11973786354064941,
+      "result_length": 7,
+      "compression_percent": 0.0028,
+      "status": "PASS"
+    },
+    {
+      "description": "Large random string (500k, K=20)",
+      "pattern": "random",
+      "size": 500000,
+      "k": 20,
+      "time_seconds": 1.9987154006958008,
+      "result_length": 484092,
+      "compression_percent": 96.81840000000001,
+      "status": "PASS"
+    },
+    {
+      "description": "Mixed patterns (750k, K=26)",
+      "pattern": "mixed_patterns",
+      "size": 750000,
+      "k": 26,
+      "time_seconds": 1.5899341106414795,
+      "result_length": 188532,
+      "compression_percent": 25.1376,
+      "status": "PASS"
+    }
+  ],
+  "meta": {
+    "description": "compress_text benchmark results for Assignment 1",
+    "timestamp": "2026-01-25 18:51:41"
+  }
+}
