@@ -10,7 +10,7 @@ Re-Pair is an off-line dictionary-based compression algorithm originally propose
 
 1. Find the most frequent adjacent pair of symbols in the string.
 2. Replace every non-overlapping occurrence of that pair with a new, single symbol.
-3. Repeat up to *k* times (or until no pair appears more than once).
+3. Repeat up to _k_ times (or until no pair appears more than once).
 
 This is exactly what modern BPE tokenizers do — they learn a vocabulary by repeatedly merging frequent character pairs in a training corpus.
 
@@ -34,12 +34,12 @@ Output: "BcBc"
 
 The naive approach (re-scan the string each round) is **O(n·k)** and hits the time limit on large inputs. This implementation is designed for efficiency:
 
-| Component | Approach | Complexity |
-|---|---|---|
-| String representation | Doubly-linked list over index arrays (`next[]`, `prev[]`) | O(1) insert/delete |
-| Pair counting | Hash map + full rescan per round | O(n) per round |
-| Best pair selection | Min-heap keyed on `(-count, leftmost_pos)` | O(p log p) per round |
-| Replacement pass | Single left-to-right traversal of live nodes | O(n) per round |
+| Component             | Approach                                                  | Complexity           |
+| --------------------- | --------------------------------------------------------- | -------------------- |
+| String representation | Doubly-linked list over index arrays (`next[]`, `prev[]`) | O(1) insert/delete   |
+| Pair counting         | Hash map + full rescan per round                          | O(n) per round       |
+| Best pair selection   | Min-heap keyed on `(-count, leftmost_pos)`                | O(p log p) per round |
+| Replacement pass      | Single left-to-right traversal of live nodes              | O(n) per round       |
 
 **Overall: O(k·n)** time, **O(n)** space — practical up to ~1M characters with k=26.
 
@@ -59,6 +59,7 @@ Per round:
 ```
 
 When a pair `(a, b)` is merged into new symbol `X` at position `i`:
+
 - `sym[i]` is updated to `X`
 - position `j` (the `b` in the pair) is unlinked and marked dead
 - the heap is rebuilt from scratch next round (simple & correct for k ≤ 26)
@@ -99,7 +100,7 @@ re-pair-compressor/
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/re-pair-compressor.git
+git clone https://github.com/yashhashhrrreee/Re-Pair-text-compressor.git
 cd re-pair-compressor
 ```
 
@@ -142,19 +143,19 @@ pytest tests/ -v
 
 ### Test coverage
 
-| Category | Tests |
-|---|---|
-| Assignment examples | `test_basic_examples` |
-| No possible merges | `test_no_merges_possible` |
-| Single pair patterns | `test_single_pair` |
-| Tie-breaking (leftmost wins) | `test_tie_breaking` |
-| Non-overlapping greedy replacement | `test_non_overlapping_replacement` |
-| Recursive merging (A→B chains) | `test_recursive_merging` |
-| Early stopping | `test_early_stopping` |
-| Edge cases (k=0, empty string) | `test_k_equals_zero`, `test_empty_string` |
-| Length invariant | `test_length_property` |
-| k=26 stress | `test_k_equal_26_on_various_patterns` |
-| Large random inputs | `test_long_repeating_pattern_edge` |
+| Category                           | Tests                                     |
+| ---------------------------------- | ----------------------------------------- |
+| Assignment examples                | `test_basic_examples`                     |
+| No possible merges                 | `test_no_merges_possible`                 |
+| Single pair patterns               | `test_single_pair`                        |
+| Tie-breaking (leftmost wins)       | `test_tie_breaking`                       |
+| Non-overlapping greedy replacement | `test_non_overlapping_replacement`        |
+| Recursive merging (A→B chains)     | `test_recursive_merging`                  |
+| Early stopping                     | `test_early_stopping`                     |
+| Edge cases (k=0, empty string)     | `test_k_equals_zero`, `test_empty_string` |
+| Length invariant                   | `test_length_property`                    |
+| k=26 stress                        | `test_k_equal_26_on_various_patterns`     |
+| Large random inputs                | `test_long_repeating_pattern_edge`        |
 
 ---
 
@@ -168,13 +169,13 @@ Results are saved to `results/benchmark_results.json`.
 
 ### Performance summary (pre-run results)
 
-| Input size | Pattern | k | Time |
-|---|---|---|---|
-| 100k | uniform (aaaa…) | 26 | ~0.01s |
-| 100k | repeated pairs (ababab…) | 26 | ~0.02s |
-| 500k | random | 20 | ~2.0s |
-| 750k | mixed | 26 | ~1.6s |
-| 1M | random | 26 | ~5.1s ⚠️ |
+| Input size | Pattern                  | k   | Time     |
+| ---------- | ------------------------ | --- | -------- |
+| 100k       | uniform (aaaa…)          | 26  | ~0.01s   |
+| 100k       | repeated pairs (ababab…) | 26  | ~0.02s   |
+| 500k       | random                   | 20  | ~2.0s    |
+| 750k       | mixed                    | 26  | ~1.6s    |
+| 1M         | random                   | 26  | ~5.1s ⚠️ |
 
 > **Note:** The 1M-char random k=26 case exceeds the 3s classroom time limit. Random strings have many unique pairs surviving each round, making each scan expensive. Structured/compressible inputs (uniform, repeated) are significantly faster since the string shrinks rapidly after each merge.
 
@@ -188,13 +189,14 @@ This algorithm is the direct ancestor of **Byte Pair Encoding**, used to build v
 - **BERT / RoBERTa** (uses WordPiece, a variant)
 - **LLaMA, Mistral** and most modern open-source LLMs
 
-The difference: BPE tokenizers run Re-Pair on a large corpus to learn a *fixed vocabulary*, then apply that vocabulary at inference time. This implementation shows the core merge loop in its purest form.
+The difference: BPE tokenizers run Re-Pair on a large corpus to learn a _fixed vocabulary_, then apply that vocabulary at inference time. This implementation shows the core merge loop in its purest form.
 
 ---
 
 ## Algorithm Notes
 
 See [`docs/algorithm_notes.md`](docs/algorithm_notes.md) for:
+
 - Detailed walkthrough of the linked-list trick
 - Why naive approaches fail at scale
 - Potential O(n log n) improvements using incremental pair tracking
@@ -203,5 +205,5 @@ See [`docs/algorithm_notes.md`](docs/algorithm_notes.md) for:
 
 ## References
 
-- Larsson, N. J., & Moffat, A. (2000). *Off-line dictionary-based compression*. Proceedings of the IEEE, 88(11), 1722–1732.
-- Sennrich, R., Haddow, B., & Birch, A. (2016). *Neural machine translation of rare words with subword units* (BPE for NLP). ACL 2016.
+- Larsson, N. J., & Moffat, A. (2000). _Off-line dictionary-based compression_. Proceedings of the IEEE, 88(11), 1722–1732.
+- Sennrich, R., Haddow, B., & Birch, A. (2016). _Neural machine translation of rare words with subword units_ (BPE for NLP). ACL 2016.
